@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  
+  <body>
+    <div>
+      <nav class="flex items-center justify-between bg-red-600 px-10 p-12">
+      <img src="./images/logo.webp" alt="Logo" class="w-40 absolute" />
+      <ul class="flex-1 text-center space-x-4 ">
+      <li class="list-none inline-block"></li>
+      <a href="./index.html" class="text-white text-xl font-serif hover:text-gray-300 px-20 transition duration-300 ease-in-out transform hover:scale-110">Home</a>
+      </li>
+      <li class="list-none inline-block"></li>
+      <a href="./about.html" class="text-white text-xl font-serif hover:text-gray-300 px-20 transition duration-300 ease-in-out transform hover:scale-110">About</a>
+      </li>
+      <li class="list-none inline-block">
+      <a href="./blog.html" class="text-white text-xl font-serif hover:text-gray-300 px-20 transition duration-300 ease-in-out transform hover:scale-110">Blog</a>
+      </li>
+      <li class="list-none inline-block">
+      <a href="./contact.html" class="text-white text-xl font-serif hover:text-gray-300 px-20 transition duration-300 ease-in-out transform hover:scale-110">Contact Us</a>
+      </li>
+      </ul>
+      </nav>
+    </div>
+
+
+      <div class="slider w-full overflow-hidden"></div>
+        <img src="./images/optimized/04.webp" class="slide slide w-full h-auto hidden" />
+        <img src="./images/optimized/021.webp" class="slide slide w-full h-auto hidden" />
+        <img src="./images/optimized/1.webp" class="slide slide w-full h-auto hidden" />
+        <img src="./images/optimized/05.webp"" class="slide slide w-full h-auto hidden" />
+      </div>
+
+
+      <div class="min-w-full bg-red-600 h-4"></div>
+      <section class="flex items-center justify-center space-x-4 m-10 ">
+        <img src="./images/logo-vv.PNG" alt="Logo" class="w-70" />
+        <div>
+          <h1 class="text-4xl text-center p-10 font-serif">Gem Uniform</h1>
+          <p class="text-center p-10 font-serif">
+            Established in 1988, Gem Uniforms is a proud supplier of world class work uniforms<br>
+             and career apparels for hundreds of prestigious clients across the Middle East for 25 years now.<br>
+              We have been successfully fulfilling the rising demands for appropriate dress codes<br>
+               in the rapidly growing F&B, Oil & Gas, and other service industries in the United Arab Emirates.
+          </p>
+        </div>
+      </section>
+      
+      <footer>
+        <footer class="flex items-center font-serif justify-center bg-red-600 p-5">
+          <p class="text-white">© 2021 Gem Uniform</p>
+      </footer>
+
+
+      <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide() {
+          slides[currentSlide].style.display = 'block';
+        }
+
+        function hideSlide() {
+          slides[currentSlide].style.display = 'none';
+        }
+
+        function nextSlide() {
+          hideSlide();
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide();
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+      </script>
+
+    </div>
+  </body>
+</html>
